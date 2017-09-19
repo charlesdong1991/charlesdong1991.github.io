@@ -4,10 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at:
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at
-[jekyll](https://github.com/jekyll/jekyll)
+I am Kaiqi Dong, a data scientist based in Amsterdam and I am now working for Royal Schiphol Group. I have hands-on experience in building predictive models and applying different machine learning algorithms. In the meantime, I am helping build Smart Data Hub in AWS for Schiphol Airport.
