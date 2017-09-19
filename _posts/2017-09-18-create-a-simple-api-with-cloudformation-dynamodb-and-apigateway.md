@@ -1,3 +1,10 @@
+---
+layout: post
+title: Create A Simple API With CloudFormation DynamoDB And ApiGateway
+description: A post introducing how to quickly set up a simple api on ApiGateway by CloudFormation
+tags: AWS CloudFormation Apigateway api DynamoDB 
+---
+
 Recently, I spent most of my time learning and using AWS services, and in this post, I am going to show how to create a very simple API function with CloudFormation, DynamoDB and API Gateway.
 
 AWS CloudFormation is an AWS service that allows you to set up AWS resources in AWS. You just need to create a template which describes all AWS resources you need, and AWS CloudFormation will take care of the rest of things like provisioning and configuring resources. In general, CloudFormation uses files in the format of JSON or YAML to create templates (all codes in the posts are in YAML format).
