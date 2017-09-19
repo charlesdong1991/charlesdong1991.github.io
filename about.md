@@ -4,4 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am Kaiqi Dong, a data scientist based in Amsterdam and I am now working for Royal Schiphol Group. I have hands-on experience in building predictive models and applying different machine learning algorithms. In the meantime, I am helping build Smart Data Hub in AWS for Schiphol Airport.
+I am Kaiqi Dong, a data scientist based in Amsterdam and I am now working for Royal Schiphol Group. I use Python, Spark, Pandas, Scikit-learn, Hive, AWS, etc in my work. I have hands-on experience in building predictive models, applying different machine learning algorithms and setting up AWS environment.
+
+I am also looking forward to doing freelance assignments. Feel free to contact me if you have any questions.
+
