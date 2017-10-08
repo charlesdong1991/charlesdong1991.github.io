@@ -18,7 +18,7 @@ access_token_secret: YOUR_ACCESS_TOKEN_SECRET
 
 And I can get these private information in my working Jupyter Notebook script without letting people see them. And you store all of these information in a dictionary that can be used later on.
 
-```Python
+{% highlight python %}
 import configparser
 config = configparser.RawConfigParser()
 config.read(‘authorization.cfg')
@@ -29,22 +29,22 @@ keys = {
       "access_token": config.get('Keys', 'access_token'),
       "access_token_secret": config.get('Keys', 'access_token_secret')
   }
-```
+{% endhighlight %}
 
 Well, you are on the half way getting your first bunch of data from Twitter! Now, time to use some cool Python library to make our life easier. The library I use is tweepy, you can find the docs here: http://docs.tweepy.org/en/v3.5.0/getting_started.html, you need to import OAuthHandler to handle the access issue.
 
-```Python
-Import tweepy
+{% highlight python %}
+import tweepy
 from tweepy import OAuthHandler
 auth = OAuthHandler(keys[‘consumer_key’],keys[’consumer_secret’])
 auth.set_access_token(keys['access_token’],keys[‘access_token_secret’])
 
 api = tweepy.API(auth)
-```
+{% endhighlight %}
 We can take a look at the data we collect from Twitter now by using Cursor and search methods, let’s see a simple example to get a feel of how it works:
 
-```Python
+{% highlight python %}
 for tweet in tweepy.Cursor(api.search,q='#schiphol OR #Amsterdam Airport',lang='en').items():
     print(tweet.text)
-```
+{% endhighlight %}
 By this request, you can get tweets which use either schiphol or Amsterdam Airport as hashtag in their tweets and the language of the tweets is specified to English. Of course, there are much more things you can do with tweepy, in the future posts, I will show some interesting result got from Twitter! 
