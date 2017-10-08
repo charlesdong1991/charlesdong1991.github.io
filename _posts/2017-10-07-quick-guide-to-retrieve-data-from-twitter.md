@@ -1,3 +1,10 @@
+---
+layout: post
+title: Quick Guide to Retrieve Data from Twitter
+description: A post introducing a way to easily retrieve data from Twitter
+tags: api twitter 
+---
+
 [app_creation]:{{ site.baseurl }}/images/app_creation.png “Create New App.” 
 
 Due to my work, I started using and creating APIs, thus in my spare time, I had some fun with exploring, analysing and visualising collected data from Twitter which has an awesome REST API available for developers. In this post, I will introduce how to use Python to easily retrieve data from Twitter.
