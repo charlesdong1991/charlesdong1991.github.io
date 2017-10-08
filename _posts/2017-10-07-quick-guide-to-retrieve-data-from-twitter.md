@@ -1,4 +1,4 @@
-[app_creation]: {{ site.baseurl }}/images/app_creation.png “Create New App.” 
+[app_creation]:{{ site.baseurl }}/images/app_creation.png “Create New App.” 
 
 Due to my work, I started using and creating APIs, thus in my spare time, I had some fun with exploring, analysing and visualising collected data from Twitter which has an awesome REST API available for developers. In this post, I will introduce how to use Python to easily retrieve data from Twitter.
 
@@ -21,11 +21,10 @@ And I can get these private information in my working Jupyter Notebook script wi
 {% highlight python %}
 import configparser
 config = configparser.RawConfigParser()
-config.read(‘authorization.cfg')
+config.read('authorization.cfg')
 keys = {
-      "consumer_secret": config.get(
-          'Keys', 'consumer_secret'),
       "consumer_key": config.get('Keys', 'consumer_key'),
+      "consumer_secret": config.get('Keys', 'consumer_secret'),
       "access_token": config.get('Keys', 'access_token'),
       "access_token_secret": config.get('Keys', 'access_token_secret')
   }
@@ -36,8 +35,8 @@ Well, you are on the half way getting your first bunch of data from Twitter! Now
 {% highlight python %}
 import tweepy
 from tweepy import OAuthHandler
-auth = OAuthHandler(keys[‘consumer_key’],keys[’consumer_secret’])
-auth.set_access_token(keys['access_token’],keys[‘access_token_secret’])
+auth = OAuthHandler(keys['consumer_key'],keys['consumer_secret'])
+auth.set_access_token(keys['access_token'],keys['access_token_secret'])
 
 api = tweepy.API(auth)
 {% endhighlight %}
