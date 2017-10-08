@@ -18,7 +18,7 @@ access_token_secret: YOUR_ACCESS_TOKEN_SECRET
 
 And I can get these private information in my working Jupyter Notebook script without letting people see them. And you store all of these information in a dictionary that can be used later on.
 
-```python
+```Python
 import configparser
 config = configparser.RawConfigParser()
 config.read(‘authorization.cfg')
@@ -33,7 +33,7 @@ keys = {
 
 Well, you are on the half way getting your first bunch of data from Twitter! Now, time to use some cool Python library to make our life easier. The library I use is tweepy, you can find the docs here: http://docs.tweepy.org/en/v3.5.0/getting_started.html, you need to import OAuthHandler to handle the access issue.
 
-```python
+```Python
 Import tweepy
 from tweepy import OAuthHandler
 auth = OAuthHandler(keys[‘consumer_key’],keys[’consumer_secret’])
@@ -43,7 +43,7 @@ api = tweepy.API(auth)
 ```
 We can take a look at the data we collect from Twitter now by using Cursor and search methods, let’s see a simple example to get a feel of how it works:
 
-```python
+```Python
 for tweet in tweepy.Cursor(api.search,q='#schiphol OR #Amsterdam Airport',lang='en').items():
     print(tweet.text)
 ```
