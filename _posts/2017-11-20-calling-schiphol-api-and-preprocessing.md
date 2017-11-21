@@ -43,18 +43,18 @@ flt_analysis = flt[list(cols)].rename(columns = lambda x: x.replace('.','_')).re
 
 # filter out some rows and assign a new column with airline prefix
 flt_analysis = flt_analysis.query("mainFlight == flightName & serviceType == 'J'")\
-    					     .drop_duplicates(subset=['scheduleDate','scheduleTime','mainFlight','flightDirection']) \
-   					     .assign(prefix_mainflight = lambda x: x['mainFlight'].str.extract('^([A-Z]{3}|[A-Z0-9]{2})',expand=False))
+    		           .drop_duplicates(subset=['scheduleDate','scheduleTime','mainFlight','flightDirection']) \
+   			   .assign(prefix_mainflight = lambda x: x['mainFlight'].str.extract('^([A-Z]{3}|[A-Z0-9]{2})',expand=False))
 
 ```
 
 In the next blog, I will present some analysis I have made about on-time rate for flights arriving at Schiphol, therefore, I need to clean the dataset a bit further to make it usable for my purpose.
 ```python
 df_arrival_delay = flt_analysis.query("flightDirection == 'A'")\
-    						     .loc[:,['scheduleDate','scheduleTime','actualLandingTime','prefix_mainflight']]\
-    						     .assign(scheduleLandingTime = lambda x: pd.to_datetime(x['scheduleDate'] + ' ' + x['scheduleTime']).dt.tz_localize('CET'))\
-    						     .assign(actualLandingTime = lambda x: pd.to_datetime(x['actualLandingTime']).dt.tz_localize('UTC').dt.tz_convert('CET'))\
-   						     .assign(delay_min = lambda x: (x['actualLandingTime']-x['scheduleLandingTime']).astype('timedelta64[m]'))
+    			       .loc[:,['scheduleDate','scheduleTime','actualLandingTime','prefix_mainflight']]\
+    			       .assign(scheduleLandingTime = lambda x: pd.to_datetime(x['scheduleDate'] + ' ' + x['scheduleTime']).dt.tz_localize('CET'))\
+    			       .assign(actualLandingTime = lambda x: pd.to_datetime(x['actualLandingTime']).dt.tz_localize('UTC').dt.tz_convert('CET'))\
+   			       .assign(delay_min = lambda x: (x['actualLandingTime']-x['scheduleLandingTime']).astype('timedelta64[m]'))
 
 # throw out rows where there are no actual landing time recorded
 df_arrival_delay = df_arrival_delay.loc[df_arrival_delay['actualLandingTime'].notnull()]
