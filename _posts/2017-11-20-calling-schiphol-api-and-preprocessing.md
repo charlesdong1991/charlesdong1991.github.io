@@ -1,4 +1,4 @@
-[app_creation]: {{ site.baseurl }}/images/cleaned.png “Show the first five rows of cleaned dataset” 
+[cleaned_dataset]: {{site.baseurl}}/images/cleaned.png "Show the first five rows of cleaned dataset" 
 
 Schiphol Airport becomes one of the few airports in the world that provide public API for developers, in this blog, I will show you how to extract data in a proper way from Schiphol Public API and present some preprocessing steps to clean the dataset.
 
@@ -63,7 +63,7 @@ You can see that only arrival flights are selected, and note that one of annoyin
 
 Here is how the final dataset looks like:
 
-![app_creation]
+![cleaned_dataset]
 
 Okay! Now, the preprocessing part is done, and ready for the analysis part!
 
