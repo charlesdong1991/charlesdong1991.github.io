@@ -1,4 +1,4 @@
-[cleaned_dataset]: {{site.baseurl}}/images/cleaned.png 
+[cleaned_dataset]: https://github.com/charlesdong1991/charlesdong1991.github.io/blob/master/images/cleaned.png 
 
 Schiphol Airport becomes one of the few airports in the world that provide public API for developers, in this blog, I will show you how to extract data in a proper way from Schiphol Public API and present some preprocessing steps to clean the dataset.
 
