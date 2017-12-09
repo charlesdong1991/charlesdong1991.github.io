@@ -1,4 +1,3 @@
-Bokeh visualisation example
 
 [bokeh1]: {{ site.baseurl }}/images/bokeh1.png
 [bokeh2]: {{ site.baseurl }}/images/bokeh2.png
@@ -13,7 +12,7 @@ Polygon(list(zip(tmp['POINT_X'],tmp['POINT_Y'])))
 ```
 If we have a point and would like to know if this point is within this polygon area or not, we can also easily achieve it using polygon, let’s assume the point is (4.8, 52):
 ```python
-polygon = Polygon(list(zip(tmp[‘POINT_X’],tmp[‘POINT_Y'])))
+polygon = Polygon(list(zip(tmp['POINT_X'],tmp['POINT_Y'])))
 point = Point((4.8,52))
 polygon.contains(point)
 ```
@@ -21,8 +20,8 @@ Then the boolean result will be printed out telling you if this point (4.8,52) i
 
 Next, I will create a function that helps us find the centroid of the polygon area:
 ```python
-# we will aggregate them and put all in a list for each group
-tmp = tmp.groupby("VOPCODE”)\
+# aggregate them and put all x or y coordinate in a list for each group
+tmp = tmp.groupby('VOPCODE')\
                   .agg({'POINT_X': lambda x: list(x),'POINT_Y':lambda x: list(x)})\
                   .reset_index()
 
@@ -49,9 +48,9 @@ p = GMapPlot(
 )
 p.title.text = "Schiphol"
 
-p.api_key = “your_google_api_key”
+p.api_key = 'your_google_api_key'
 
-source = ColumnDataSource(data = dict(lon = tmp[‘centroid_x’].tolist(), lat = tmp[‘centroid_y’].tolist(), gate = tmp[‘VOPCODE’].tolist()))
+source = ColumnDataSource(data = dict(lon = tmp['centroid_x'].tolist(), lat = tmp['centroid_y'].tolist(), gate = tmp['VOPCODE'].tolist()))
 circle = Circle(x="lon", y="lat", size= 10, fill_color="blue", fill_alpha=0.5, line_color=None)
 p.add_glyph(source, circle)
 
