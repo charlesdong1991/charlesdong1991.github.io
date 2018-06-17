@@ -1,4 +1,4 @@
-This is a global air pollution measurement dataset on Google Cloud platform, and the purpose is to use SQL to do gain some insight on this data (https://www.kaggle.com/open-aq/openaq/data). Therefore, I wrote down some basic SQL codes to illustrate this dataset.
+This OpenAQ is a global air pollution measurement dataset on Google Cloud platform, and the purpose is to use SQL to do gain some insight on this data (https://www.kaggle.com/open-aq/openaq/data). Therefore, I wrote down some basic SQL codes to illustrate this dataset.
 
 First, will import google cloud bigquery:
 ```python
@@ -59,7 +59,7 @@ ORDER BY f.country
 LIMIT 20
 """
 list(client.query(query4).result(timeout=100))
-
+```
 I notice that the same city/location can have pollution records at different timestamps, we can see the average pollution value of a specific pollutant over all timestamps a city/location has. And in this example, we will see the O3 value at different places.
 
 ```python
