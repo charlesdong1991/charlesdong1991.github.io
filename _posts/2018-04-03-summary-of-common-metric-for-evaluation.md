@@ -2,13 +2,13 @@
 
 After working for a while, i think this might be a good opportunity to wrap up the general metrics used for evaluation of machine learning models. Because model evaluation is essential, different metrics may give different results.
 
-1. Accuracy:  
+### Accuracy:  
 
 This is the ratio of number of correct predictions to the total number of predictions made. The problem of accuracy arises when the dataset is imbalanced, because the cost of misclassification of minor class samples will be very high. So we should never use accuracy as the metric when target variable classes in the data are a majority of one class. 
 
 For example, if the size of sample is 100, and 95 is A, and 5 is B, however, if our model is bad, and predict everything as A, we still get 95% accuracy although the model is bad.
 
-2. Log loss: 
+### Log loss: 
 
 This is also known as logarithmic loss, which works by penalising the false classification and is often used for multi-class classification. Unlike accuracy, loss is not a percentage. It is a summation of the errors made for each example in training or validation sets. It’s calculated as below:
 
