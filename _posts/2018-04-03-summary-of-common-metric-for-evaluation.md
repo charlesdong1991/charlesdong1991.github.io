@@ -53,7 +53,7 @@ Specificity is exactly opposite of recall:
 
 Specificity = TN / (TN + FP)
 
-### Area under curve (AUC)
+### Area under curve (AUC):
 
 AUC is widely used for evaluation and generally used for binary classification problem. AUC of a classifier is equal to the probability that the classifier will rank a randomly chosen positive example higher than a randomly chosen negative example. And it’s composed of two rates: true positive rate (recall) and false positive rate (specificity).
 
@@ -61,7 +61,7 @@ TPR (y-axis) refers to the proportion of positive data points that are correctly
 
 And the range of value of AUC is [0, 1], and the bigger AUC, the better the model is.
 
-### F1 score
+### F1 score:
 
 Literally, F1 score is the harmonic mean between precision and recall, and it kinds of trying to find balance between precision and recall. It tells how precise the classifier is as well as how robust it is (meaning that it does not miss a number of cases). If one number of precision or recall is really small, the F1 Score kind of raises a flag and is closer to the smaller number than the bigger one, giving the model an appropriate score rather than just an arithmetic mean. High precision but low recall will give a very good accuracy but will mean the model miss a large number of instances that are difficult to classify. 
 
@@ -69,7 +69,7 @@ F1 Score = 2 * Precision * Recall / (Precision + Recall)
 
 Therefore, the greater the F1 score is, the better the model is.
 
-### Mean squared error (MSE) or Root mean squared error (RMSE)
+### Mean squared error (MSE) or Root mean squared error (RMSE):
 The MSE takes the average of the square of the difference between original and predicted values, and it’s easier to compute the gradient. Since it takes square, the effect of large errors will become more pronounced, and the model should focus on large errors. 
 
 And RMSE is the root of MSE.
