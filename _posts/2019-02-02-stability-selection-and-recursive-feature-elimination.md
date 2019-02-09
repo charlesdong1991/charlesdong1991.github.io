@@ -38,3 +38,21 @@ print "Features sorted by their rank:"
 print sorted(zip(map(lambda x: round(x, 4), rfe.ranking_), names))
 ```
 
+And alternatively, there is a very powerful package developed by scikit-learn which is call BorutaPy, this is Python implementation of Boruta R package.
+```python
+from boruta import BorutaPy
+from sklearn.ensemble import RandomForestClassifier
+
+rfc = RandomForestClassifier(n_estimators=200, n_jobs=4, class_weight='balanced', max_depth=6)
+boruta_selector = BorutaPy(rfc, n_estimators='auto', verbose=2)
+
+boruta_selector.fit(X, y)
+```
+
+And the subset of feature will be selected. You can then select those columns and then only train on them instead of whole features, like:
+```python
+selected_cols = X_train.columns[boruta_selector.support_]
+```
+
+
+
