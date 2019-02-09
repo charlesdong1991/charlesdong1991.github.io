@@ -46,7 +46,7 @@ from sklearn.ensemble import RandomForestClassifier
 rfc = RandomForestClassifier(n_estimators=200, n_jobs=4, class_weight='balanced', max_depth=6)
 boruta_selector = BorutaPy(rfc, n_estimators='auto', verbose=2)
 
-boruta_selector.fit(X, y)
+boruta_selector.fit(X_train, y_train)
 ```
 
 And the subset of feature will be selected. You can then select those columns and then only train on them instead of whole features, like:
