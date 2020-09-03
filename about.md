@@ -4,7 +4,8 @@ title: About
 permalink: /about/
 ---
 
-I am Kaiqi Dong, a data scientist based in Amsterdam and I am now working for Royal Schiphol Group. And I am also working for Randstad part-time as a data scientist. I use Python, Spark, Pandas, Scikit-learn, Hive, AWS, etc in my work. I have hands-on experience in building predictive models, applying different machine learning algorithms and setting up AWS environment.
+I am Kaiqi Dong, a data scientist based in Amsterdam and I have been working for Catawiki since July 2019. Beforehands, I worked full-time for Royal Schiphol Group for more than 2.5 years and part-time for Randstad for 3 months. I use Python, Spark, pandas, scikit-learn, Hive, Bigquery, AWS, GCP, Kubernetes etc at work. 
 
-I am also looking forward to doing freelance assignments. Feel free to contact me if you have any questions.
+In my spare time, I love contributing to open source, and I am the maintainer of pandas, and a contributor to Koalas. Moreover, I published two Python packages: py-roughviz, and StockInsider.
 
+I am a big fan of analytics, visualization and NLP! Get in touch with me for further knowledge sharing!
